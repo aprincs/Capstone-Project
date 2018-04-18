@@ -1,0 +1,101 @@
+
+    <div class="container" ng-controller="HomeController">
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-12">
+				<div class="well well-lg">
+					<p>Whether you're planning a trip to some foreign land or you just need a loaner vehicle while your car's enjoying a tune-up, chances are you've had to rely on a car rental at some point along the way.</p> <p>And yet, even though we've all used them, very few of us actually know the history behind the car rental industry and how it grew to become such an important part of every day travel.</p> 
+				</div>
+			</div>
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-12">
+                <h3 align=center>Our Top Cars</h3>
+			</div>
+		</div>
+		<div class="row row-content">
+            <div class="col-xs-12 col-sm-12">		
+				<div class="carousel-wrapper">
+					<div class="carousel carousel-showmanymoveone slide" id="myCarousel">
+					  <div class="carousel-inner">    
+						<div class="item active">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/fiat500.png" alt=""></a></div>
+						</div>
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/opelcorsa.png" alt=""></a></div>
+						</div>    
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/vwgolf.png" alt=""></a></div>
+						</div>
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/vwpassat.png" alt=""></a></div>
+						</div>
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/nissanjuke.png" alt=""></a></div>
+						</div>
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/nissanqashqai.png" alt=""></a></div>
+						</div>
+						<div class="item">
+						  <div class="c-image-wrapper"><a href="#" data-toggle="modal" title=""><img src="images/jumpy.png" alt=""></a></div>
+						</div>
+					  </div>
+					  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+					  <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+					</div>  
+				</div>
+			</div>
+		</div>
+					<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						   <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<!--<h4 class="modal-title" id="imgtitle"></h4>-->
+						  </div>
+						  <div class="modal-body"></div>   
+						</div>
+					  </div>
+					</div>
+
+			<div class="row row-content">
+				<div class="col-xs-12 col-sm-12">
+					<h3 align=center>Our New Offer</h3>
+				</div>
+			</div>
+			<div class="row row-content">
+				<div class="col-xs-12 col-sm-12">
+					<div ng-if="!showDish">
+						<h3>{{message}}</h3>
+					</div>
+					<div class="media" ng-if="showDish">
+						<div class="media-left media-middle">
+							<a ui-sref="app.dishdetails({id: dish._id})">
+								<img class="media-object img-thumbnail"
+								ng-src={{dish.image}} alt="Car of the day">
+							</a>
+						</div>
+						<div class="media-body">
+							<h2 class="media-heading">{{dish.name}}
+							<span class="label label-warning">{{dish.label}}</span>
+							<span class="badge">{{dish.price | currency}} per day</span></h2>
+						<p>
+							<ul>
+								<li><b>Passengers:</b> {{dish.description[0].passengers}}</li>
+								<li><b>Baggage:</b> {{dish.description[0].baggage}}</li>
+								<li><b>Transmission:</b> {{dish.description[0].transmission}}</li>
+								<li><b>Conditioning:</b> {{dish.description[0].conditioning}}</li>
+								<li><b>Fuel consumption:</b> {{dish.description[0].fuel}}</li>
+								<li><b>CO2:</b> {{dish.description[0].co2}}</li>
+							</ul>
+						</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	<p style="padding:20px;"></p>
+    <script>
+        var url = "../bower_components/jquery/carusel-n-modal.js";
+		$.getScript(url);
+	</script>

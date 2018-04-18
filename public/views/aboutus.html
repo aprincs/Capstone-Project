@@ -1,0 +1,180 @@
+
+    <div class="container" ng-controller="AboutController">
+        <div class="row">
+            <div class="col-xs-12">
+               <ul class="breadcrumb">
+                   <li><a href="index.html">Home</a></li>
+                   <li class="active">About Us</li>
+               </ul>
+            </div>
+            <div class="col-xs-12">
+               <h3>About Us</h3>
+               <hr>
+            </div>
+        </div>
+        
+        <div class="row row-content">
+            <div class="col-xs-12 col-sm-8">
+                <h2>Our History</h2>
+                <div class="alert-warning">
+                   <h4>The earliest known example of cars being offered for rent dates to 1906.</h4>                
+                </div>
+				<div class="well well-lg">
+				<p>Our agency is a company that rents automobiles for short periods of time, generally ranging from a few hours to a few weeks. We have numerous local branches (which allow a user to return a vehicle to a different location), we are located near Riga airport and near city center, also our website allowing online reservations.</p>
+				<p>Easy Car Rent is an ongoing Latvian success story. Our guiding principles, and humble beginning, revolve around personal honesty and integrity. We believe in strengthening our communities one neighborhood at a time, serving our customers as if they were our family, and rewarding hard work. These things are as true today as they were when we were founded in 2004.</p>
+				<p>Today, our developed network means Easy Car Rent is the largest transportation solutions provider in Latvia. We offer car and vans rentals, as well as car sharing.</p>
+				</div>
+            </div>
+            <div class="col-xs-12 col-sm-4">
+
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Facts At a Glance</h3>
+                    </div>
+                    <div class="panel-body">
+                        <dl class="dl-horizontal">
+                            <dt>Started</dt>
+                            <dd>8 Aug. 2004</dd>
+                            <dt>Total Number of Cars</dt>
+                            <dd>30</dd>
+                            <dt>Last Year's Turnover</dt>
+                            <dd>$140,815</dd>
+                            <dt>Employees</dt>
+                            <dd>11</dd>
+                       </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row row-content">
+            <div class="col-xs-12">
+                <h2>Our Top Rent Car Features</h2>
+                <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr class="warning">
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Passengers
+                        </th>
+                        <th>
+                            Baggage
+                        </th>
+                        <th>
+                            Transmission
+                        </th>
+                        <th>
+                            Conditioning
+                        </th>
+                        <th>
+                            Fuel consumption
+                        </th>
+                        <th>
+                            CO2
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            {{dish1.name}}
+                        </th>
+                        <td>
+                            {{dish1.description[0].passengers}}
+                        </td>
+                        <td>
+                            {{dish1.description[0].baggage}}
+                        </td>
+                        <td>
+                            {{dish1.description[0].transmission}}
+                        </td>
+                        <td>
+                            {{dish1.description[0].conditioning}}
+                        </td>
+                        <td>
+                            {{dish1.description[0].fuel}}
+                        </td>
+                        <td>
+                            {{dish1.description[0].co2}}
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                        <th>
+                            {{dish2.name}}
+                        </th>
+                        <td>
+                            {{dish2.description[0].passengers}}
+                        </td>
+                        <td>
+                            {{dish2.description[0].baggage}}
+                        </td>
+                        <td>
+                            {{dish2.description[0].transmission}}
+                        </td>
+                        <td>
+                            {{dish2.description[0].conditioning}}
+                        </td>
+                        <td>
+                            {{dish2.description[0].fuel}}
+                        </td>
+                        <td>
+                            {{dish2.description[0].co2}}
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                        <th>
+                            {{dish3.name}}
+                        </th>
+                        <td>
+                            {{dish3.description[0].passengers}}
+                        </td>
+                        <td>
+                            {{dish3.description[0].baggage}}
+                        </td>
+                        <td>
+                            {{dish3.description[0].transmission}}
+                        </td>
+                        <td>
+                            {{dish3.description[0].conditioning}}
+                        </td>
+                        <td>
+                            {{dish3.description[0].fuel}}
+                        </td>
+                        <td>
+                            {{dish3.description[0].co2}}
+                        </td>
+                    
+                    </tr>
+                    <tr>
+                        <th>
+                            {{dish4.name}}
+                        </th>
+                        <td>
+                            {{dish4.description[0].passengers}}
+                        </td>
+                        <td>
+                            {{dish4.description[0].baggage}}
+                        </td>
+                        <td>
+                            {{dish4.description[0].transmission}}
+                        </td>
+                        <td>
+                            {{dish4.description[0].conditioning}}
+                        </td>
+                        <td>
+                            {{dish4.description[0].fuel}}
+                        </td>
+                        <td>
+                            {{dish4.description[0].co2}}
+                        </td>
+                    
+                    </tr>
+                </table>
+                </div>
+            </div>
+            <p style="padding:20px;"></p>
+       </div> 
+    </div>

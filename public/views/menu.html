@@ -1,0 +1,75 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+		   <ul class="breadcrumb">
+			   <li><a href="index.html">Home</a></li>
+			   <li class="active">Cars for Rent</li>
+		   </ul>
+		</div>
+	</div>
+	
+	<div class="row row-content">
+		<div class="col-xs-12" ng-if="!showMenu">
+            <h3>{{message}}</h3>
+        </div>
+        <div class="col-xs-12" ng-if="showMenu">
+			<button ng-click="toggleDetails()" class="btn btn-xs btn-warning pull-right" type="button">
+				{{showDetails ? 'Hide Details':'Show Details'}}
+			</button> 
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation"
+				ng-class="{active:isSelected(1)}">
+				<a ng-click="select(1)"
+				 aria-controls="all menu"
+				 role="tab">All Cars</a></li>
+				<li role="presentation"
+				ng-class="{active:isSelected(2)}">
+				<a ng-click="select(2)"
+				 aria-controls="standard"
+				 role="tab">Standard</a></li>
+				<li role="presentation"
+				ng-class="{active:isSelected(3)}">
+				<a ng-click="select(3)"
+				 aria-controls="estate"
+				 role="tab">Estate</a></li>
+				<li role="presentation"
+				ng-class="{active:isSelected(4)}">
+				<a ng-click="select(4)"
+				 aria-controls="4wd"
+				 role="tab">4WD/SUV</a></li>
+				<li role="presentation"
+				ng-class="{active:isSelected(5)}">
+				<a ng-click="select(5)"
+				 aria-controls="pcvan"
+				 role="tab">People Carrier/Van</a></li>
+			</ul>
+			<div class="tab-content">
+				<ul class="media-list tab-pane fade in active">
+				<li class="media" ng-repeat="dish in dishes | filter:filtText">
+					<div class="media-left">
+						<a ui-sref="app.dishdetails({id: dish._id})">
+                        <img class="media-object img-thumbnail"
+                        ng-src={{dish.image}} alt="vehicle">
+                        </a>
+					</div>
+					<div class="media-body">
+						<h2 class="media-heading">{{dish.name}}
+						 <span class="label label-warning">{{dish.label}}</span>
+						 <span class="badge">{{dish.price | currency}} per day</span></h2>
+						<p>
+							<ul ng-show="showDetails">
+								<li><b>Passengers:</b> {{dish.description[0].passengers}}</li>
+								<li><b>Baggage:</b> {{dish.description[0].baggage}}</li>
+								<li><b>Transmission:</b> {{dish.description[0].transmission}}</li>
+								<li><b>Conditioning:</b> {{dish.description[0].conditioning}}</li>
+								<li><b>Fuel consumption:</b> {{dish.description[0].fuel}}</li>
+								<li><b>CO2:</b> {{dish.description[0].co2}}</li>
+							</ul>
+						</p>
+					</div>
+				</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+</div>
